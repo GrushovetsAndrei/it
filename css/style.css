@@ -154,6 +154,10 @@ html {
     box-shadow: 0 0 20px #2b7a78;
 }
 
+.portfolio img:hover {
+    width: 105%;
+}
+
 /*Blog*/
 .blog {
     position: relative;
@@ -164,10 +168,14 @@ html {
     background-color: rgba(51, 153, 153, 0.40);
 }
 
+.blog .card:hover {
+    box-shadow: 0 0 20px #17252a;
+
+}
+
 .blog .card img {
     border-radius: 10px 10px 0 0;
     width: 100%;
-    height: 60%;
 }
 
 .blog .card-title {
@@ -534,7 +542,7 @@ footer .social {
     }
 
     .description {
-        top: 10vh;
+        top: 15vh;
         left: 5vw;
         border-radius: 10px;
         width: 90vw;
@@ -543,9 +551,9 @@ footer .social {
     }
 
     .description p {
-        font-size: 1.5em;
+        font-size: 1em;
         padding: 1em;
-        line-height: 1.1;
+        line-height: 1.5;
         text-align: justify;
     }
 
@@ -569,8 +577,9 @@ footer .social {
 
     .about p {
         margin-left: 10px;
-        font-size: 0.8em;
-        text-align: justify;
+        padding-right: 1em;
+        font-size: 1em;
+        text-align: right;
     }
 
     .about span {
@@ -592,7 +601,7 @@ footer .social {
     .about .desc p,
     .about .desc li {
         font-size: 1em;
-        margin: 0 10px 5px 10px;
+        margin: 0 1em 1em 1em;
     }
 
     /*Portfolio*/
