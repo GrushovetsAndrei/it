@@ -59,6 +59,15 @@ html {
     background: rgba(244, 244, 244, 0.20);
 }
 
+.description {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: #f7f9fb;
+    border-radius: 20px;
+}
+
+
 .description h1 {
     color: #2b7a78;
 }
@@ -70,12 +79,15 @@ html {
 
 .description p span {
     color: #2b7a78;
+    font-weight: 700;
 }
 
 .description button {
     border: 1px solid #2b7a78;
     background: #2b7a78;
     color: #f7f9fb;
+    font-size: 1.5em;
+    padding: 1em;
 }
 
 .about {
@@ -89,8 +101,15 @@ html {
     background-color: rgba(51, 153, 153, 0.40);
 }
 
+.about .photo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
 .about img {
-    width: 100%;
+    width: 70%;
     border-radius: 50%;
 }
 
@@ -138,17 +157,11 @@ html {
 /*Blog*/
 .blog {
     position: relative;
-    margin: 0 0 2em 0;
 }
 
 .blog h1 {
     color: #2b7a78;
     background-color: rgba(51, 153, 153, 0.40);
-}
-
-.blog .card {
-    border-radius: 10px;
-    box-shadow: 0 0 20px #f7f9fb;
 }
 
 .blog .card img {
@@ -267,17 +280,26 @@ html {
 }
 
 footer {
-    min-height: 8vh;
+    display: flex;
+    min-height: 6vh;
     width: 100vw;
-    margin: auto;
     background-color: #17252a;
     color: #f7f9fb;
 }
 
-footer span {
+footer a {
+    color: #f7f9fb;
+    text-decoration: none;
     text-align: center;
-    vertical-align: top;
+    vertical-align: middle;
+    font-size: 2em;
 }
+
+footer a:hover {
+    text-decoration: none;
+    color: #10828C;
+}
+
 
 .icon {
 
@@ -288,11 +310,11 @@ footer .phone:hover {
     filter: grayscale(0)
 }
 
-.social {
+footer .social {
     display: flex;
     flex-direction: row;
-    align-items: start;
-    justify-content: space-evenly;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 
@@ -301,11 +323,20 @@ footer .phone:hover {
 (min-width: 1200px) {
 
     footer {
-        padding: 2em;
+        padding: 20px 0px 20px 0px;
     }
 
     footer span {
+        font-size: 1.5em;
+    }
+
+    .phone .a {
         font-size: 2em;
+    }
+
+    footer .phone img {
+        width: 50px;
+        height: 50px;
     }
 
     .icon {
@@ -313,9 +344,11 @@ footer .phone:hover {
         height: 50px;
     }
 
-    .navbar {
-        background: #2b7a78;
+    footer .social {
+        align-items: flex-end;
     }
+
+
 
     .navbar .logo {
         left: 20px;
@@ -329,23 +362,9 @@ footer .phone:hover {
         font-size: 1.5em;
     }
 
-
-    .header {
-        background-image: url('../images/title.jpg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-    }
-
     .description {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
         top: 20vh;
         padding: 2em;
-        margin: 0 50px 0 50px;
-        background-color: #f7f9fb;
-        border-radius: 20px;
     }
 
     .description h1 {
@@ -358,17 +377,13 @@ footer .phone:hover {
         line-height: 1.5;
     }
 
-    .description p span {
-        font-weight: 700;
-    }
-
-    .description button {
-        font-size: 1.5em;
+    .about h1 {
+        padding: 2em 0 1em 0;
     }
 
     .about img {
-        margin-left: 10% 0;
-        padding: 10%;
+        margin-left: 20% 0;
+        padding: 2em;
     }
 
     .about p {
@@ -450,17 +465,11 @@ footer .phone:hover {
         font-size: 1.5em;
     }
 
-    .team img {}
-
     .team .item:hover .des {
         height: 70%;
         width: 90%;
         padding: 3em 0 0 0;
     }
-
-    .team .text-muted {}
-
-    .team span {}
 
     /*Prices*/
 
@@ -491,7 +500,7 @@ footer .phone:hover {
 @media (orientation: portrait),
 (max-width: 1200px) {
     footer {
-        padding: 2em;
+        padding: 1em;
     }
 
     footer span {
@@ -501,7 +510,166 @@ footer .phone:hover {
     .icon {
         width: 40px;
         height: 40px;
-        margin: 10px;
     }
 
+    .phone img {
+        width: 20px;
+        height: 20px;
+        display: none;
+    }
+
+    .phone a {
+        text-align: center;
+    }
+
+    .description {
+        top: 10vh;
+        border-radius: 10px;
+        width: 80%;
+        padding: 1em;
+    }
+
+    .description p {
+        font-size: 0.8em;
+        padding: 1em;
+        line-height: 1.2;
+        text-align: justify;
+    }
+
+    .description h1 {
+        font-size: 1.5em;
+    }
+
+    .description button {
+        font-size: 1em;
+    }
+
+    .about {
+        padding-bottom: 1em;
+    }
+
+    .about h1 {
+        padding: 1.5em 0 0.5em 0;
+        font-size: 1.5em;
+    }
+
+    .about p {
+        margin-left: 10px;
+        font-size: 0.8em;
+        text-align: justify;
+    }
+
+    .about span {
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    .about .photo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about .desc h3 {
+        display: none;
+    }
+
+    .about .desc p,
+    .about .desc li {
+        font-size: 1em;
+        margin: 0 10px 5px 10px;
+    }
+
+    /*Portfolio*/
+    .portfolio {
+        padding-bottom: 1em;
+    }
+
+    .portfolio h1 {
+        padding: 1.5em 0 0.5em 0;
+        font-size: 1.5em;
+    }
+
+    .portfolio img {
+        width: 90%;
+        margin: 0.5em;
+        box-shadow: 0 0 20px #2b7a78;
+        transition-duration: 0.3s;
+        transition: linear;
+    }
+
+    .portfolio img:hover {
+        width: 95%;
+        transition-duration: 0.3s;
+        transition: linear;
+    }
+
+    /*Blog*/
+    .blog {
+        padding-bottom: 1em;
+    }
+
+    .blog h1 {
+        padding: 1.5em 0 0.5em 0;
+        font-size: 1.5em;
+    }
+
+    .blog .card {
+        margin-bottom: 1em;
+    }
+
+    .blog .card-title {
+        font-size: 1.2em;
+    }
+
+    .blog .card-text {
+        line-height: 1;
+        font-size: 1em;
+    }
+
+    .team {
+        margin-bottom: 2em;
+    }
+
+    .team h1 {
+        padding: 1.5em 0 0.5em 0;
+        font-size: 1.5em;
+    }
+
+    .team .item {
+        margin-bottom: 1em;
+    }
+
+    .team .des {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    .team .item:hover .des {
+        top: 20%;
+        height: 40%;
+        width: 100%;
+        padding: 1em 0 1em 0;
+    }
+
+    .team .text-muted {
+        color: red;
+        font-weight: 500;
+    }
+
+    .team span {
+        color: black;
+        font-weight: 100;
+        line-height: 0.8;
+    }
+
+    .contact-form h1 {
+        font-size: 2em;
+    }
+
+    .contact-form .right .form-control::placeholder {
+        color: #17252a;
+        font-size: 1em;
+    }
 }
